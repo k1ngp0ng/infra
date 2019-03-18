@@ -1,0 +1,14 @@
+# field type : string, langage : painless
+# Scripted field that compute nginx (or apache) request field and resume him to the main resource URI
+# example "/books/132" => will compute /"books"
+
+def path = doc['request.keyword'].value;
+if (path != null) {
+    int secondSlashIndex = path.indexOf('/', 1);
+    if (secondSlashIndex > 0) {
+       return path.substring(0, secondSlashIndex);
+    }
+}
+return path;
+
+
