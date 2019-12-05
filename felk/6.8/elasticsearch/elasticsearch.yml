@@ -1,0 +1,11 @@
+network:
+  host: [_site_, _local_]
+http:
+  port: 9200
+discovery:
+  type: single-node
+path:
+  logs: /var/log/elasticsearch-6.8
+  data: /var/opt/elasticsearch-6.8
+
+xpack.security.enabled: true

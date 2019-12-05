@@ -1,0 +1,5 @@
+elasticsearch.username: "kibana"
+elasticsearch.password: "xxxxxxxxxx"
+
+logging.dest: /var/log/kibana-6.8.0/kibana.log
+
